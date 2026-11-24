@@ -1,1 +1,32 @@
-# FinancialManagementSystem
+# Finance Manager (Backend CLI)
+
+Консольное приложение для управления личными финансами на Java 17.
+
+## Как запустить
+1. Установите JDK 17 и Maven.
+2. Выполните сборку: `mvn clean install`
+3. Запустите класс `Main` из IDE или через консоль.
+
+## Поддерживаемые команды
+- `register <login> <password>`
+- `login <login> <password>`
+- `logout`
+- `income <категория> <сумма>`
+- `expense <категория> <сумма>`
+- `budget set <категория> <сумма>`
+- `budget edit <категория> <сумма>`
+- `stats`
+- `stats <категория1> <категория2>`
+- `transfer <login> <сумма>`
+- `export <имя_файла.csv>`
+- `import <имя_файла.csv>`
+- `exit`
+
+## Архитектура
+- model: доменные сущности
+- repository: интерфейсы и реализации хранилищ (в памяти для пользователей, в JSON для кошельков)
+- service: бизнес-логика
+- cli: обработка команд
+
+## Тестирование
+Запуск тестов: `mvn test`
